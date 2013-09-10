@@ -8,6 +8,7 @@ public class Sort {
 		System.out.println("\n" + "This is the original array");
 
 		QuickSort quickS = new QuickSort(A);
+		MergeSort mergeS = new MergeSort(A);
 	}
 }
 
@@ -58,47 +59,57 @@ class QuickSort {
 	}
 }
 
-/*
-public class Sort {
-	public static void main(String[] args) {
-		int[] A = {11,1,45,6,32,42,8,6,8,4,55,93,8};
+class MergeSort {
+	public MergeSort(int[] A) {
+		int len = A.length;
 
-		quickSort(A, 0, A.length - 1);
+		mergeSort(A, 0, len);
+
 		for(int i: A)
-			System.out.print(i + ",");
-		System.out.println("\b");
+			System.out.print(i + " ");
+		System.out.println("\n" + "This is the result from MergeSort");
 	}
 
-	public static void quickSort(int[] A, int h, int r) {
-		if(h >= r)
+	public void mergeSort(int[] A, int h, int n) {
+		if(n == 1)
 			return;
 
-		int p = partition(A, h, r);
-		quickSort(A, h, p);
-		quickSort(A, p+1, r);
+		int n1 = n / 2;
+		int n2 = n - n1;
+
+		mergeSort(A, h, n1);
+		mergeSort(A, h+n1, n2);
+
+		merge(A, h, n1, n2);
 	}
 
-	public static int partition(int[] A, int h, int r) {
-		int pivot = A[(h+r)/2];
-		int i = h - 1;
-		int j = r + 1;
+	public void merge(int[] A, int h, int n1, int n2) {
+		int[] B = new int[n1+n2];
+		int k1 = 0;
+		int k2 = 0;
 
-		while(true) {
-			i++;
-			while(i < r && A[i] < pivot) i++;
-			j--;
-			while(j > h && A[j] > pivot) j--;
+		while((k1 < n1) && (k2 < n2)) {
+			if(A[h+k1] < A[h+n1+k2]) {
+				B[k1+k2] = A[h+k1];
+				k1++;
+			} else {
+				B[k1+k2] = A[h+n1+k2];
+				k2++;
+			}
+		}
 
-			if(i < j)
-				swap(A, i, j);
-			else
-				return j;
+		while(k1 < n1) {
+			B[k1+k2] = A[h+k1];
+			k1++;
+		}
+
+		while(k2 < n2) {
+			B[k1+k2] = A[h+n1+k2];
+			k2++;
+		}
+
+		for(int i = 0; i < (n1+n2); i++) {
+			A[h+i] = B[i];
 		}
 	}
-
-	public static void swap(int[] A, int a, int b) {
-		int tmp = A[a];
-		A[a] = A[b];
-		A[b] = tmp;
-	}
-}*/
+}
