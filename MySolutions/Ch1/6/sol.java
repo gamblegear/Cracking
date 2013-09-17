@@ -1,0 +1,3 @@
+/*
+Pay attention to the manipulation of index of arrays
+*/
