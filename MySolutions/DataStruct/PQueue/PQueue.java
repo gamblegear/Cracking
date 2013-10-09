@@ -15,7 +15,12 @@ class Heap {
 		Queue<DataWrapper> minHeap = new PriorityQueue<DataWrapper>(3, S_TimeComp);
 		
 		addDataToQ(minHeap);	
-		System.out.println("** Peek **" + '\n' + minHeap.peek().startTime + '\n');
+		System.out.println("## peek: " + minHeap.peek().startTime);
+		
+		for(DataWrapper dw: minHeap) {
+			System.out.println("&& traverse startTime and content: " + dw.content + ", " + dw.startTime);
+		}
+		
 		deleteDataFromQ(minHeap);	
 	}
 	
