@@ -2,6 +2,7 @@ import java.util.Comparator;
 import java.util.PriorityQueue;
 import java.util.Queue;
 import java.util.Random;
+import java.util.Iterator;
 
 public class PQueue {
 	public static void main(String[] args) {
@@ -20,7 +21,15 @@ class Heap {
 		for(DataWrapper dw: minHeap) {
 			System.out.println("&& traverse startTime and content: " + dw.content + ", " + dw.startTime);
 		}
+	
+		// get the number of elements in the heap
+		System.out.println("@@ Number of elements in the heap: " + minHeap.size());
 		
+		//see if can iterate the heap
+		Iterator<DataWrapper> iter = minHeap.iterator();
+		while(iter.hasNext())
+			System.out.println("~~ content in the heap: " + iter.next().content);
+	
 		deleteDataFromQ(minHeap);	
 	}
 	
