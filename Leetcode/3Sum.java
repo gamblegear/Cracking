@@ -3,6 +3,39 @@
 // this value is the same with the current one. If it is, then slide the pointer
 // to the later part directly
 
+// This is better way to use the HashMap;
+// Since we need to eliminate the duplicate, we can directly make use of a set
+// Create an ArrayList from a HashSet;
+public class Solution {
+    public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
+        // IMPORTANT: Please reset any member data you declared, as
+        // the same Solution instance will be reused for each test case.
+        
+        Set<ArrayList<Integer>> ret = new HashSet<ArrayList<Integer>>();
+        //ArrayList<Integer> combination = new ArrayList<Integer>();
+        
+        for(int i = 0; i < num.length; i++) {
+            int target = 0 - num[i];
+            Set<Integer> set = new HashSet<Integer>();
+            for(int j = i + 1; j < num.length; j++) {
+                if(set.contains(target - num[j])) {
+                    //combination.clear();
+                    ArrayList<Integer> combination = new ArrayList<Integer>();
+                    combination.add(num[i]);
+                    combination.add(num[j]);
+                    combination.add(target - num[j]);
+                    Collections.sort(combination);
+                    ret.add(combination);
+                } else {
+                    set.add(num[j]);
+                }
+            }
+        }
+        
+        return new ArrayList<ArrayList<Integer>>(ret);
+    }
+}
+
 public class Solution {
     public ArrayList<ArrayList<Integer>> threeSum(int[] num) {
         // Start typing your Java solution below
