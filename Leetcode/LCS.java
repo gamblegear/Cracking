@@ -1,4 +1,4 @@
-c class LCS {                                                              
+class LCS {                                                              
         public static void main(String[] args) {                                
                 // to be implemented                                            
                 String s1 = "cn_blog";                                          

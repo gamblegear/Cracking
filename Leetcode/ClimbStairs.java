@@ -1,4 +1,13 @@
-// DP will cache the intermediate result
+/*
+You are climbing a stair case. It takes n steps to reach to the top.
+
+Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?
+*/
+
+
+// This is not the DP method. This is only iterative way
+// Refer to Fibonacci to check DP.
+// If in DP, there should be a seperate array to keep track of intermediate values
 
 public class Solution {
     public int climbStairs(int n) {
