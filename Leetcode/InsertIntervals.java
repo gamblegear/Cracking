@@ -29,24 +29,27 @@ public class Solution {
         
         ArrayList<Interval> result = new ArrayList<Interval>();
 
-        int i = 0
-        for(i; i < intervals.size(); i++) {
-        	Interval temp = Intervals.get(i);
+        int i = 0;
+        int len = intervals.size();
 
-        	if(temp.end < newInterval.start)
-        		result.add(temp);
-        	else if(temp.start > newInterval.end)
-        		break;
-        	else {
-        		newInterval.start = Math.min(newInterval.start, temp.start);
-        		newInterval.end = Math.max(newInterval.end, temp.end);
-        	}
+	    while(i < len) {
+	        Interval temp = intervals.get(i);
+
+	        if(temp.end < newInterval.start)
+	        	result.add(temp);
+	        else if(temp.start > newInterval.end)
+	        	break;
+	        else {
+	        	newInterval.start = Math.min(newInterval.start, temp.start);
+	        	newInterval.end = Math.max(newInterval.end, temp.end);
+	        }
+        	i++;
         }
 
         result.add(newInterval);
 
-        while(i < intervals.size())
-        	result.add(Intervals.get(i++));
+        while(i < len)
+        	result.add(intervals.get(i++));
 
         return result;
     }
