@@ -27,3 +27,44 @@ public class Solution {
         return profit;
     }
 }
+
+
+// This is the best time to buy and sell III
+
+public int maxProfit(int[] prices) {  
+     if(prices.length <= 1){  
+       return 0;  
+     }  
+     //if sell at this day or before this day, the max profit  
+     int[] store = new int[prices.length];  
+     int start = 0 ;  
+     //go from start  
+     for (int i = 1 ; i < prices.length;i++){  
+       // if larger than start, calculate the profit and compare with former one  
+       // always store the largest profit into store[]  
+       if(prices[i] > prices[start]){  
+         store[i] = Math.max(prices[i] - prices[start], store[i-1]);  
+       }  
+       // if smaller than start, update start index, this is the new start index,  
+       // just copy the former store value  
+       else {  
+         store[i] = store[i-1];  
+         start = i;  
+       }  
+     }  
+     // set the last value as result  
+     int result = store[prices.length - 1];  
+     // go from last element  
+     start = prices.length - 1;  
+     for (int i = prices.length - 2;i >= 0 ;i--) {  
+       // if smaller than start, calculate the profit,   
+       //then plus the store[i](if sell at this day or before this day, the max profit)  
+       // compare with result  
+       if(prices[i] < prices[start]){  
+         result = Math.max(result, prices[start] - prices[i] + store[i]);  
+       } else {  
+         start = i;  
+       }  
+     }  
+     return result;  
+   }  
