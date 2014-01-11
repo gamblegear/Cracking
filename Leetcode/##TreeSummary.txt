@@ -1,0 +1,3 @@
+##TreeSummary.txt
+
+1. Two kinds of recursions: recursion starts at the leaf or starts at the null node
