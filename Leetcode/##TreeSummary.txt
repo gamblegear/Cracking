@@ -1,3 +1,12 @@
 ##TreeSummary.txt
 
-1. Two kinds of recursions: recursion starts at the leaf or starts at the null node
+1. Two kinds of recursions: recursion starts at the leaf or starts at the null node.
+
+2. A typical thought in Tree is that, the sub-tree is yet another kind of tree.
+
+3. HashMap is a good helper in tree problems. BUT must keep in mind that the return value of each recursive level
+   may not be the same of the max/min value stored in the HashMap, which keeps (root, max/min). This is a little
+   similar to the "min/max of a stack problem".
+
+4. If Top-down approach is not convenient, say, need to recursively test whether to take the left child or right
+   child, then can take a Bottom-up approach. This is also an iterative way.
