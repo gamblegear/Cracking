@@ -1,4 +1,0 @@
-##StringSummary.txt
-1. two pointers
-2. recursion until the last element
-3. charAt()
