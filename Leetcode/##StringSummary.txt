@@ -1,5 +1,9 @@
 ##StringSummary.txt
 
-1. two pointers
-2. recursion until the last element
-3. charAt()
+1. two pointers.
+
+2. recursion until the last element.
+
+3. charAt().
+
+4. Scan from both sides (left and right) and keep record of the lhs/rhs value in arrays.

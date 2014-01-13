@@ -10,3 +10,5 @@
 
 4. If Top-down approach is not convenient, say, need to recursively test whether to take the left child or right
    child, then can take a Bottom-up approach. This is also an iterative way.
+
+5. Need to pay attention to the "processing order", whether it should be from right to left or from left to right.
