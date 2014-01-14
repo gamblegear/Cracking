@@ -1,0 +1,5 @@
+So, I need to creat two HashMap:
+One is to store the parent children relationship.
+Another is to store the value of the current node.
+
+Also, remember, if wanna traverse a structure iteratively, we need to create a Queue or Stack.
