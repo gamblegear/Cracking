@@ -38,3 +38,34 @@ public class Solution {
             return ret;
     }
 }
+
+// This is the way to rotate an arrays
+void leftRotate(int arr[], int d, int n)
+{
+  int i, j, k, temp;
+  for (i = 0; i < gcd(d, n); i++)
+  {
+    /* move i-th values of blocks */
+    temp = arr[i];
+    j = i;
+    while(1)
+    {
+      k = j + d;
+      if (k >= n)
+        k = k - n;
+      if (k == i)
+        break;
+      arr[j] = arr[k];
+      j = k;
+    }
+    arr[j] = temp;
+  }
+}
+
+int gcd(int a,int b)
+{
+   if(b==0)
+     return a;
+   else
+     return gcd(b, a%b);
+}
