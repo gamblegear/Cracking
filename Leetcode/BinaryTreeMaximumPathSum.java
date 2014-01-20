@@ -19,13 +19,17 @@ another is the path through the root itself.
 Need to keep track of two numbers, one is the max value including the current node,
 another is the max value under this node. We will keep the first one as passing
 value and the max value in the hashMap.
+
+Also, if this 
 */
 
 public class Solution {
     public int maxPathSum(TreeNode root) {
         HashMap<TreeNode, Integer> map = new HashMap<TreeNode, Integer>();
         map.put(null, Integer.MIN_VALUE);
-        
+        //put the null key is critical because if the root if null, the map would
+        //have no value for this null key(root).
+
         getMaxPath(root, map);
         
         return map.get(root);

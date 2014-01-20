@@ -45,11 +45,10 @@ public class Solution {
                                                                                 
         HashMap<UndirectedGraphNode, UndirectedGraphNode> map = new HashMap<UndirectedGraphNode, UndirectedGraphNode>();    
         HashSet<UndirectedGraphNode> visited = new HashSet<UndirectedGraphNode>();
-        Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();
-                                                                                
-        UndirectedGraphNode head = node;                                        
-        queue.add(head);                                                        
-                                                                                
+        Queue<UndirectedGraphNode> queue = new LinkedList<UndirectedGraphNode>();                                                      
+        
+        queue.add(node);
+
         while(!queue.isEmpty()) {                                               
                 UndirectedGraphNode n = queue.poll();                        
                                                                                 
@@ -59,7 +58,7 @@ public class Solution {
                                                                                 
                 UndirectedGraphNode clone;                                      
                 if(map.get(n) != null)                                       
-                        clone = map.get(node);                                  
+                        clone = map.get(n);                                  
                 else {                                                          
                         clone = new UndirectedGraphNode(n.label); 
                         map.put(n, clone);                                   
@@ -78,6 +77,6 @@ public class Solution {
                 }                                                               
         }
         
-        return map.get(head);  
+        return map.get(node);  
     }                                                                           
 }  

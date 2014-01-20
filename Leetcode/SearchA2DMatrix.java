@@ -15,6 +15,11 @@ Consider the following matrix:
 Given target = 3, return true.
 */
 
+/*
+This is to use the linear pattern to solve the 2D matrix problem.
+Actually this is still a binary search.
+*/
+
 public class Solution {
     public boolean searchMatrix(int[][] matrix, int target) {
         int row = matrix.length;
