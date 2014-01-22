@@ -7,3 +7,5 @@
 3. charAt().
 
 4. Scan from both sides (left and right) and keep record of the lhs/rhs value in arrays.
+
+5. Play with subString, especially for problems in recursion.
