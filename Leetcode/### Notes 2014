@@ -8,3 +8,6 @@ Best Time Stock III:
 	1. DP - what is DP, DP is to use another array/2-D array to keep the intermediate value (usually this value is the difference of)
 	2. Use two seperate arrays to keep the difference, one is from left and another is from the right, this step is the same idea as Best Time Stock I
 	3. The idea to count from both two sides is to make sure they dont overlap
+
+Binary Tree In-order traverse:
+	1. Stack<> stack = new Stack<>(), or can use List's addFirst, addLast, removeFirst, removeLast
