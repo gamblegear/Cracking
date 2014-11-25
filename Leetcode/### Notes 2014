@@ -11,3 +11,17 @@ Best Time Stock III:
 
 Binary Tree In-order traverse:
 	1. Stack<> stack = new Stack<>(), or can use List's addFirst, addLast, removeFirst, removeLast
+	
+Symmetric Tree:
+	1. Split the tree into two parts - left and right
+	2. Iterative way is to list all the situations
+
+Minimum Depth of Binary Tree:
+	1. If a node has one child (left or right), then this node is NOT leaf node
+	
+Largest BST in a Binary Tree:
+	1. Two approaches - 
+		(1) top down, start from each node and check if it's BST, O(n^2)
+		(2) bottom up, recursively and keep a TreeNodeHelper(TreeNode root, int BSTSize, int max, int min, boolean isBST), O(n)
+	2. When doing BST, always need to keep track of maxValue and minValue - from the definition of BST
+	3. If right child isBST == true, need to if the subtree with root node's isBST value
