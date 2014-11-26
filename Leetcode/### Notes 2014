@@ -25,3 +25,19 @@ Largest BST in a Binary Tree:
 		(2) bottom up, recursively and keep a TreeNodeHelper(TreeNode root, int BSTSize, int max, int min, boolean isBST), O(n)
 	2. When doing BST, always need to keep track of maxValue and minValue - from the definition of BST
 	3. If right child isBST == true, need to if the subtree with root node's isBST value
+
+Convert Sorted List to Binary Search Tree:
+	1. Use a runner and walker to find the middle node of List
+	2. Keep a slow.next = node at beginning, in order to break the list into 2 sub-list
+	3. ATTENTION: when dividing a list, think about the situation of only one node
+	
+Converted Sorted Array to Binary Search Tree:
+	1. To find the middle number, use (start + end)/2
+	
+Construct Binary Tree from Preorder and Inorder Traversal 
+	1. The first node from Preorder is the root, use this root to divide trees into left and right by inorder (evrerything left to root will be left subtree in inorder)
+	2. Index matters, so maintain a HashMap for inorder
+
+Construct Binary Tree from Inorder and Postorder Traversal 
+	1. Same idea as previous one
+
