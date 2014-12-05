@@ -41,3 +41,36 @@ Construct Binary Tree from Preorder and Inorder Traversal
 Construct Binary Tree from Inorder and Postorder Traversal 
 	1. Same idea as previous one
 
+Add Binary:
+	1. This is mainly trick with String - toArray(), charAt(), Integer.toString(), String=""
+	2. num.charAt(pt) - '0'
+	3. Deal with sring1, string2 and carry
+
+Add Two Numbers:
+	1. The same idea with "Add Binary" - difference is LinkedList
+
+Same Tree:
+	1. Recursively compare two trees
+	2. The Base condition is null, remember to return false when one is null while another is NOT null
+
+**Recover Binary Search Tree: (constant space)
+	1. Use inorder traverse for all nodes and keep a "prev" node
+	2. Dealing with two nodes - think about the relative positions of the two nodes - next to each other or on different branches of the tree. So we will keep track of TWO nodes at the first exception (prev and root), and if we have another exception, we will update the second TreeNode to be root
+	3. Traversing a tree iteratively or recursively will both take O(n) space. Morris Traversal will take O(1) space
+
+sqrt()
+	1. Binary Search between 0 and (n/2+1)
+	2. Since this is integer, mid*mid > target and (mid-1)*(mid-1) < target
+
+Unique Binary Search Trees
+	1. This is DP problem
+	2. BST has its order, we need to filter out a clue to parse the question - here we use the root of BST - each node in the string could be the root of BST
+	3. Once we set the root, we only care about its left sub tree and right sub tree
+
+Unique Binary Search Trees II
+	1. Same idea as the previous one, but each time we return ArrayList<TreeNode>
+	2. To parse the tree into two sub trees: pass in (start, end) - (start, i-1) and (i+1, end)
+	3. Technical part: for(TreeNode node: nodes), if nodes.add(null), still we can go into this loop with node = null
+
+Populating Next Right Pointers in Each Node
+	1. This is to provide another way to traverse the tree in 2D - use a slider to slide from the top along left children and use another one to go from left to right
