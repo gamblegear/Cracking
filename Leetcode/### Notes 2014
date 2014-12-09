@@ -74,3 +74,38 @@ Unique Binary Search Trees II
 
 Populating Next Right Pointers in Each Node
 	1. This is to provide another way to traverse the tree in 2D - use a slider to slide from the top along left children and use another one to go from left to right
+
+Subsets:
+	1. Think about how to construct subsets - made of sets of different lengths
+	2. Use an index to run for different arrays
+
+Anagrams:
+	1. String.toCharArray(); LinkedList.toArray(); ArrayList.toArray();
+	2. HashMap containsKey
+	3. a = array.toString() and b = new String(array) are different - b contains "" while a does not
+
+Swap Nodes in Pairs:
+	1. Can use recursion on strings as well
+	2. Recurion is from end to head, so that we can avoid the difficulty in finding the previous node
+	3. Of course, I can use iterative way
+
+Rotate List:
+	1. Get to the end of list when counting the length
+	2. Create a start node as a cutter and cut at the proper position
+	3. When doing modular, HAVE TO think about negative numbers, ZERO and positive numbers
+
+Merge K Sorted List:
+	1. Use a PriorityQueue to store/sort the first node of each list
+	2. When polling from a Collection, need to declare a new Node to take it
+
+Valid Number:
+	1. The problem description is not clear. So need to figure out all the situations - what is a valid number? what would the input be like (with white space at the beginning and end of the string)
+	2. Use lots of flags to denote "hasDot", "hasE", "hasNumber"...
+	3. str.charAt(i) >= '0' && str.charAt(i) <= '0'
+
+String to Integer (atoi):
+	1. tmp = (int) str.charAt(pos) - '0'
+	2. Pay attention to positive and negative numbers
+
+Pow(x, n)
+	1. discuss if n in (-1, 0, 1, 2) and use recursion
