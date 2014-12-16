@@ -109,3 +109,37 @@ String to Integer (atoi):
 
 Pow(x, n)
 	1. discuss if n in (-1, 0, 1, 2) and use recursion
+
+Reverse Integer:
+	1. Make good use of divide and modular for number related questions
+	2. INTEGER related questions - Think about "+-" and overflow
+	3. abs(Integer.MAX_VALUE) = abs(Integer.MIN_VALUE) - 1, so sometimes, should compare separately
+
+Plus One:
+	1. Carefully review the behavior of +1
+	2. In numbers, pay attention to the numeric values, like 9 (potential carry over)
+	2. Discuss from w/o carry over
+
+Permutation:
+	1. The recursive method is similar to subset - need to use a visited[] to tag
+	2. We are not using HashSet for this, because HashSet don't have a proper remove method
+	3. HashSet's add, move and contains all returns boolean
+	4. OR we can do insert at different positions and traverse the array from the first element to the last
+	5. In the insertion method, we can just do it sequentially, because inserting will grow the list and permute it
+
+Permutation Sequence:
+	1. Need to find hidden clues
+
+Next Permutation:
+	1. The idea rocks, also execute on digits
+
+Palindrome Number:
+	1. WHENEVER seeing an "int" in the argument list, think about negative, zero and positive
+	2. Use the while loop to calculate the divide (1, 10, 100...)
+	3. Use / and % to pick the highest digit and lowest digit
+
+Multiply Strings:
+	1. StringBuilder can be modified - mostly used for .append(), .reverse() and .toString()
+	2. The obstacle is the least significant digit is at the end of the string - need to reverse it
+	3. Follow the steps as how to do mutilply manually and also think about carry
+	4. Need to insert at the beginning of StringBuilder
