@@ -143,3 +143,5 @@ Multiply Strings:
 	2. The obstacle is the least significant digit is at the end of the string - need to reverse it
 	3. Follow the steps as how to do mutilply manually and also think about carry
 	4. Need to insert at the beginning of StringBuilder
+	5. Care about 0s at the beiginning of StringBuilder and use deleteCharAt(). Afther this, check sb.length() == 0 ? "0" : sb.toString();
+
