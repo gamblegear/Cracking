@@ -145,3 +145,28 @@ Multiply Strings:
 	4. Need to insert at the beginning of StringBuilder
 	5. Care about 0s at the beiginning of StringBuilder and use deleteCharAt(). Afther this, check sb.length() == 0 ? "0" : sb.toString();
 
+Dijkstra's Algorithm:
+	1. class Vertex implements Comparable<Vertex> {... public int compareTo (Vertex other) ...}
+	2. Rewrite toString and optionally rewrite hashCode and equals
+	3. Vertex has a list of Edges and keeps its previous vertex
+	4. Use a PriorityQueue<Vertex>. Whenever needs to update a minDistance, need to remove the vertex from PQueue first and add the updated version
+
+A* Algorithm:
+	1. f(n) = g(n) + h(n). g() is the cost for a move and h(n) is the estimation, the key part
+	2. When in a vertex, check all its neighbors and find the one with min f(n)
+	3. If f(n) is designed to be smaller than actual value, A* can for sure find the shorted path
+
+Max Flow:
+	1. The key idea is Residual Network and Reversed Arc (works as a cancellation for previous chosen path)
+	2. Steps:
+		2.1. Find a path to destination in either DFS or BFS
+		2.2. Build Residual Network and Reversed Arc based on the previous path
+		2.3. Find a new path to destination
+
+Minimun Spanning Tree:
+	1. Using HashSet and PriorityQueue will save a lot of efforts
+	2. addAll(), containsAll(), retainAll() - intersaction, toArray()
+
+Difference between DFS and BFS:
+	1. DFS goes deep by passing the current node and the visited matrix: DFS(int node, boolean[] Visted)
+	2. BFS goes wide by keeping a Queue, but still needs node and matrix: BFS(int node, boolean[] Visited)
