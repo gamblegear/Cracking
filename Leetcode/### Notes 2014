@@ -170,3 +170,16 @@ Minimun Spanning Tree:
 Difference between DFS and BFS:
 	1. DFS goes deep by passing the current node and the visited matrix: DFS(int node, boolean[] Visted)
 	2. BFS goes wide by keeping a Queue, but still needs node and matrix: BFS(int node, boolean[] Visited)
+
+LRU:
+	map.size()
+
+DYNAMICA PROGRAMMING
+
+Decode Ways:
+	1. Error points: char is '' while String is ""; The length of array should be longer than actual size
+	2. Set a helper function, isValid() to do validation and use Integer.parseInt() to convert char to int
+	3. Dynamic Programming for this one:
+		2.1. Need to create Arrays - should be one more than actual numbers - to hold starting value
+		2.2. Starting value like dp[0] and dp[1] should be discussed separately
+		2.3. One Dimention DP usually takes into consideration of a[i-1] and a[i-2]
