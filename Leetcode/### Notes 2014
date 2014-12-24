@@ -126,6 +126,7 @@ Permutation:
 	3. HashSet's add, move and contains all returns boolean
 	4. OR we can do insert at different positions and traverse the array from the first element to the last
 	5. In the insertion method, we can just do it sequentially, because inserting will grow the list and permute it
+	*. There are two ways to permute:　<1> select one number and insert at different places; <2> for a specific place, insert different numbers
 
 Permutation Sequence:
 	1. Need to find hidden clues
@@ -172,9 +173,18 @@ Difference between DFS and BFS:
 	2. BFS goes wide by keeping a Queue, but still needs node and matrix: BFS(int node, boolean[] Visited)
 
 LRU:
-	map.size()
+	0. map.size()
+	1. Data Structure to use: Node (LinkedList) and HashMap
+	2. Use detach and attach
+	3. Don't forget to map.put(key, value) and map.remove(key) when done with LinkedList
 
 DYNAMICA PROGRAMMING
+	1. Divide the original problem into sub-problems
+	2. Build the sub problem with finding min/max
+	3. Array or matrix for intermediate results. Usually one more than actual
+	4. Think about initialization: <1> all 0; <2> actual value from certain row/col; <3> increading arrays
+	5. Usually, codes are not long
+	6. For 1D: get A(i) from A(i-1) and A(i-2); for 2D: get A(i,j) from its neighbors
 
 Decode Ways:
 	1. Error points: char is '' while String is ""; The length of array should be longer than actual size
@@ -183,3 +193,10 @@ Decode Ways:
 		2.1. Need to create Arrays - should be one more than actual numbers - to hold starting value
 		2.2. Starting value like dp[0] and dp[1] should be discussed separately
 		2.3. One Dimention DP usually takes into consideration of a[i-1] and a[i-2]
+
+Edit Distance:
+	1. 2D DP
+	
+Combination Sum:
+	1. Build a single combination and if it fits the requirements, add to the result
+	2. should decrease the passing value of target, more convenient for recursing
