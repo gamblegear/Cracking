@@ -200,3 +200,32 @@ Edit Distance:
 Combination Sum:
 	1. Build a single combination and if it fits the requirements, add to the result
 	2. should decrease the passing value of target, more convenient for recursing
+
+RECURSION:
+	1. If recursion, no need for Stack/Queue - directly use method names
+	2. Put return value as an argument for the void method is convenient
+	3. Sometimes, may need to cancel the tag which is just marked, like used[]
+
+ITERATION:
+	1. Iteration needs Stack/Queue
+	2. Need a Node or wrapper to fill the stack
+
+Generate Parenthesis:
+	RECURSIVE:
+	1. Use the target number of parenthesis as a counter (down to 0)
+	2. Can NOT do String.append(), BUT can String+"".
+	3. String = "" is different from new String()
+	
+	ITERATIVE:
+	1. Wrap up tmp string with left and right counters
+	2. Treat wrapper as a node in whole
+
+Valid Parenthesis:
+	1. Use stack to compare the current and previous (stack.peek())
+	2. Pay attention whether the stack is empty or not
+
+Longest Valid Parenthesis (VERY GOOD SOLUTION):
+	1. Use brutal force with the idea from Valid Parenthesis - time exceeded
+	2. Use a stack to store index, push stack whenever there is a '(', while pop stack when ')' is coming
+	3. Need to specify when the stack will become empty
+	*. Very neat, need to write some drafts - a very good understanding of STACK
