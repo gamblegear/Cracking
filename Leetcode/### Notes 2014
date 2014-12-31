@@ -185,6 +185,7 @@ DYNAMICA PROGRAMMING
 	4. Think about initialization: <1> all 0; <2> actual value from certain row/col; <3> increading arrays
 	5. Usually, codes are not long
 	6. For 1D: get A(i) from A(i-1) and A(i-2); for 2D: get A(i,j) from its neighbors
+	7. Think about how to initialize - check how to generate the next one: n from n-1 (start from 0) OR n from n+1 (start from str.length()-1) 
 
 Decode Ways:
 	1. Error points: char is '' while String is ""; The length of array should be longer than actual size
@@ -205,6 +206,8 @@ RECURSION:
 	1. If recursion, no need for Stack/Queue - directly use method names
 	2. Put return value as an argument for the void method is convenient
 	3. Sometimes, may need to cancel the tag which is just marked, like used[]
+	4. Can recurse on Nodes (node.left etc.) or recurse on subStrings (substring(start, end))
+	5. Think about recursion when the requirement is to find all the results (combination, permutation, palindrome partition)
 
 ITERATION:
 	1. Iteration needs Stack/Queue
