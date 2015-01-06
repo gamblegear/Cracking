@@ -233,9 +233,14 @@ Longest Valid Parenthesis (VERY GOOD SOLUTION):
 	3. Need to specify when the stack will become empty
 	*. Very neat, need to write some drafts - a very good understanding of STACK
 
-Palindrome Partitioning
+Palindrome Partition
 	1. Follow the typical recursion routine to pasrse the string via substring
 	2. Use Hashmap or HashSet to keep record of intermediate result
 
 	-- We can also think about the attribute of palindrome - compare the first and last elements and then the middle substring
 	3. Use a boolean matrix, instead of HashMap. But need to think about how to initialize the matrix (start from 0 or start from str.length()-1)
+
+Palindrome Partition II
+	1. This is DP, build the matrix from beginning
+	2. This is variation of 1D DP, make the initial array int[len+1], because we need the margin
+	3. For DP problems, the result is usually the last processed element, either the first element or the last element
