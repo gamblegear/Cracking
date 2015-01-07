@@ -247,4 +247,8 @@ Palindrome Partition II:
 
 Spiral Matrix && Spiral Matrix II:
 	1. Use a counter outside (loop) and peel the matrix
-	
+
+Reorder List:
+	1. Use fast and slow pointer to find the medium
+	2. Split the list into two and reverse the second half
+	3. Merge the two sub list
