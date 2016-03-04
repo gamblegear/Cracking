@@ -12,3 +12,10 @@
    child, then can take a Bottom-up approach. This is also an iterative way.
 
 5. Need to pay attention to the "processing order", whether it should be from right to left or from left to right.
+
+6. When represent tree in array( int[] ), best practice to use "arrayStart" and "arrayEnd = arrays.length - 1" 
+
+7. When making decisions (like comparing values) on leaf node, need to check if this is real leaf node (check Path Sum) - if decided to operate on leaf nodes, then should check not to push null nodes in queue for BFS - 
+	(curr.left == null && curr.right == null && sumValue==sum)
+
+8. change the structure of a tree is a dynamic process (flatten binary tree)
