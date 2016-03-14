@@ -1,3 +1,4 @@
+// this is sz's solution - will be tested
 public class Solution {
     public TreeNode UpsideDownBinaryTree(TreeNode root) {
         if(root == null)
@@ -36,3 +37,23 @@ public class Solution {
         return root;
     }
 }
+
+// this is recursive
+public TreeNode UpsideDownBinaryTree(TreeNode root) {  
+    if (root == null)  
+        return null;  
+    TreeNode parent = root, left = root.left, right = root.right;  
+    if (left != null) {  
+        TreeNode ret = UpsideDownBinaryTree(left);  
+        left.left = right;  
+        left.right = parent;  
+        return ret;  
+    }  
+    return root;  
+}  
+
+    1                 4   1
+   / \               / \ / \
+  2   3      -->    5   2   3
+ / \
+4   5
