@@ -1,0 +1,6 @@
+1. These should always be a padding: int n = array.length => int[] dp = new int[n+1], and this padding should be initialized
+
+2. How many elements should be initialized will be decided by how far it tracks back in the equation
+   eg: dp[i] = Math.max(dp[i-1], dp[i-2] + num[i-1]), then there should be 2 preparation elements since [i-2]
+   
+3. DP is iteration, not recursion
