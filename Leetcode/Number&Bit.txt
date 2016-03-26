@@ -1,0 +1,7 @@
+1. Downgrade the dimension - map numbers to different digit and process separately OR map to bit
+
+2. Use of XOR or AND in bit - in this case, think about >> or <<, also need to think about wildcard like (& 0xFFFF)
+
+3. Bit can be used as HashMap
+
+4. Great thought - detect how many input character it could be and represent it by numbers, like A B C D -> 00, 01, 10, 11 (check Repeated DNA)
