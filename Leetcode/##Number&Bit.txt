@@ -5,3 +5,5 @@
 3. Bit can be used as HashMap
 
 4. Great thought - detect how many input character it could be and represent it by numbers, like A B C D -> 00, 01, 10, 11 (check Repeated DNA)
+
+5. x = 1000; y = x - 1 = 0111 -> x & y = 0
