@@ -1,6 +1,8 @@
-1. These should always be a padding: int n = array.length => int[] dp = new int[n+1], and this padding should be initialized
+1. These should always be a padding: int n = array.length => int[] dp = new int[n+1], and this padding should be initialized. Usually the first elements are paddings - like int[0] or the int[0][i] = ?
 
 2. How many elements should be initialized will be decided by how far it tracks back in the equation
    eg: dp[i] = Math.max(dp[i-1], dp[i-2] + num[i-1]), then there should be 2 preparation elements since [i-2]
    
 3. DP is iteration, not recursion
+
+4. DP is to build from first to the last while recursion is to build from bottom up
