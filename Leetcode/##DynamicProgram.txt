@@ -8,3 +8,7 @@
 4. DP is to build from first to the last while recursion is to build from bottom up
 
 5. Can use DP array to contain intermediate results and traverse the array later - when traversing, remember to start from behind the initialization part (think about the meaning of DP array and skip dp[0] when summarizing)
+
+6. Padding can happend at the end of array / matrix to trigger the function to work - like maximal rectangle
+
+7. How to play with DP values (1) calculate the difference
