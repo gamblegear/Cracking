@@ -1,0 +1,4 @@
+## Palindrome
+(palidrome partitioning, palidrome partitioning II)
+- need a helper function isPalindrome
+- do NOT necessarily think from the middle of string, when doing sub string - can always use head and tail
