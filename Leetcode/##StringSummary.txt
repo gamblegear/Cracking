@@ -9,3 +9,6 @@
 4. Scan from both sides (left and right) and keep record of the lhs/rhs value in arrays.
 
 5. Play with subString, especially for problems in recursion.
+
+6. When calling substring(), need to make sure there is no overflow, one method is to check: 
+   i1 < s1.length() && i2 < s2.length() && i3 < s3.length() && s1.charAt(i1) == s3.charAt(i3)
