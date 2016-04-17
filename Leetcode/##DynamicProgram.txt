@@ -12,3 +12,5 @@
 6. Padding can happend at the end of array / matrix to trigger the function to work - like maximal rectangle
 
 7. How to play with DP values (1) calculate the difference
+
+8. If operate on some "range" related problems - make a matrix of the same strings - and this will be a triangle, instead of square. the meaning of i and j would be the staring and ending point of substring. Check (Longest Palindrome Substring in DP solution)
