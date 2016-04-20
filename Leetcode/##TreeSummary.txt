@@ -23,3 +23,5 @@
 9. If there are more than one argument that I want to pass back, can use HashMap as an argument for record and return the most wanted value (baniry tree max path sum - with method in HashMap)
 
 10. When return value that has "accumulated effect" , can use Helper to pass itermediate results and always operate on the root node (see lowest common ancester)
+
+11. Tree problems can usually get solved in recursion. When tree - think about recursion first
