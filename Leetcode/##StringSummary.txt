@@ -13,3 +13,8 @@
 6. When calling substring(), need to make sure there is no overflow, one method is to check: 
    i1 < s1.length() && i2 < s2.length() && i3 < s3.length() && s1.charAt(i1) == s3.charAt(i3);
    also, when using substring - substring(s.length()) is acceptable and result is "";
+
+7. Two types of "sliding window" problems:
+    1> Minimum Window Substring: This only need to maintain the total number of appearance of target string/character list, don't care if there are more (duplicates), so only use decrease in frequency table and ignore those that are already recorded;
+
+    2> Substring with Concatenation of All Words: This one is stricter, each component in the target list can be counted one and only once - this means we have to monitor the frequency table and reshape the window whenever we have duplicate (reshap earlier); Plus, the combination has to be continuous - that means whenever the current substring is not contained in target list, we have to stop and clear the current HashMap
