@@ -18,3 +18,11 @@
 9. Using dp to calculate max / longest - build dp matrix to find suitable (matrix itself only records boolean value) and calculate longest whenever finds the fit and check if it is longest. Check Longest Palindrome Substring in DP solution
 
 10. Think about how to grow the result - could be top down, also bottom up (Palindrom Partitioning II) - when building a triangle, need to think what the triangle will look like
+
+11. DP could go from lower left to upper right, depends on the needs - Check Dungeon Game - One hint to get the direction is becuase the end result is on upper left.
+
+12. Best time to Buy and Sell Stock IV is also a good example in representing DP idea - to drive to result from initial state, where is to get global[i] from global[i-1] - this is a Top-Down solution.
+
+13. Also in Best time to Buy and Sell Stock IV - think in global optimal results and local optimal results. Understand the behavior and how to use these two
+
+14. Still the same problem - when solving with 2D matrix - pay attention to how to intitialilze the matrix (n or n+1). For already existing reference data - like prices dates, this has to be "n", otherwise, overflow. For target value, can be initialized with n+1
