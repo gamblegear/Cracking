@@ -25,3 +25,5 @@
 10. When return value that has "accumulated effect" , can use Helper to pass itermediate results and always operate on the root node (see lowest common ancester)
 
 11. Tree problems can usually get solved in recursion. When tree - think about recursion first
+
+12. Segment Tree - this is tree represented in array. The trick is to find the relations between root and children - say root is index, then left child is 2*index+1, right child is 2*index+2; When initialization, the size of tree is also important. The operations involved are mainly: construct segment tree, update segment tree and get range minimum. Details about implementations: (https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/SegmentTreeMinimumRangeQuery.java) and ideaa at (https://www.youtube.com/watch?v=ZBHKZF5w4YU)
