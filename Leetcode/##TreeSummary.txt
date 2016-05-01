@@ -27,3 +27,5 @@
 11. Tree problems can usually get solved in recursion. When tree - think about recursion first
 
 12. Segment Tree - this is tree represented in array. The trick is to find the relations between root and children - say root is index, then left child is 2*index+1, right child is 2*index+2; When initialization, the size of tree is also important. The operations involved are mainly: construct segment tree, update segment tree and get range minimum. Details about implementations: (https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/SegmentTreeMinimumRangeQuery.java) and ideaa at (https://www.youtube.com/watch?v=ZBHKZF5w4YU)
+
+13. Segment Tree - when implemented in array, how to to divide? Use mid of original array's low and high - this is because all indexes related should use original index and mid is to divide on the original array as well
