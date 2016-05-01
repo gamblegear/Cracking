@@ -29,3 +29,9 @@
 12. Segment Tree - this is tree represented in array. The trick is to find the relations between root and children - say root is index, then left child is 2*index+1, right child is 2*index+2; When initialization, the size of tree is also important. The operations involved are mainly: construct segment tree, update segment tree and get range minimum. Details about implementations: (https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/SegmentTreeMinimumRangeQuery.java) and ideaa at (https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 
 13. Segment Tree - when implemented in array, how to to divide? Use mid of original array's low and high - this is because all indexes related should use original index and mid is to divide on the original array as well
+
+14. Trie:
+	<1> Trie can be used in word checker, without requiring a dictionary, which stores all words
+	<2> Time and space complexity to build a trie is O(NM), where N is number of strings and M is the longest length of a string
+	<3> Time complexity for insert and search is O(M)
+	<4> Bad part of trie is overhead to maintain trie's pointer
