@@ -31,6 +31,7 @@
 13. Segment Tree - when implemented in array, how to to divide? Use mid of original array's low and high - this is because all indexes related should use original index and mid is to divide on the original array as well
 
 14. Trie:
+	<0> Trie node usually get defined separately - just like TreeNode and ListNode
 	<1> Trie can be used in word checker, without requiring a dictionary, which stores all words
 	<2> Time and space complexity to build a trie is O(NM), where N is number of strings and M is the longest length of a string
 	<3> Time complexity for insert and search is O(M)
