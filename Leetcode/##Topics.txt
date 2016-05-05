@@ -2,3 +2,27 @@
 (palidrome partitioning, palidrome partitioning II)
 - need a helper function isPalindrome
 - do NOT necessarily think from the middle of string, when doing sub string - can always use head and tail
+
+## Wrapper
+Wrapper can be used to pass back or process more than one parameter. Usually requires to have a comparator.
+
+## Comparator
+- Can be finished by creating the Comparator Object and initialize its compare function
+- Directly overwrite the Collections.sort function (here still create the Comparator object)
+
+Collections.sort(edges, new Comparator<Edge>() {
+		public int compare(Edge a, Edge b) {
+			if (a.x != b.x)
+				return Integer.compare(a.x, b.x);
+ 
+			if (a.isStart && b.isStart) {
+				return Integer.compare(b.height, a.height);
+			}
+ 
+			if (!a.isStart && !b.isStart) {
+				return Integer.compare(a.height, b.height);
+			}
+ 
+			return a.isStart ? -1 : 1;
+		}
+	});
