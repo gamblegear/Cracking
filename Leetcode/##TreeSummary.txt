@@ -28,6 +28,8 @@
 
 12. Segment Tree - this is tree represented in array. The trick is to find the relations between root and children - say root is index, then left child is 2*index+1, right child is 2*index+2; When initialization, the size of tree is also important. The operations involved are mainly: construct segment tree, update segment tree and get range minimum. Details about implementations: (https://github.com/mission-peace/interview/blob/master/src/com/interview/tree/SegmentTreeMinimumRangeQuery.java) and ideaa at (https://www.youtube.com/watch?v=ZBHKZF5w4YU)
 
+13. Binary Indexed Tree
+
 13. Segment Tree - when implemented in array, how to to divide? Use mid of original array's low and high - this is because all indexes related should use original index and mid is to divide on the original array as well
 
 14. Trie:
@@ -36,3 +38,11 @@
 	<2> Time and space complexity to build a trie is O(NM), where N is number of strings and M is the longest length of a string
 	<3> Time complexity for insert and search is O(M)
 	<4> Bad part of trie is overhead to maintain trie's pointer
+
+15. Binary Indexed Tree (Fenwick Tree)
+    <1> Build Tree - flipping the right most bit of '1' and tell which is the current parent
+    <2> Fill the tree - 7 = 2^2 + 2^1 + 2^0 = 6 + 1 => starting from nums[6] and the length is 1, which is sum(nums[6]) OR MORE EFFICIENTLY for each element in the array, update one by one by calling Get Next (nlogn)
+    <3> Search tree - search for range [0,6] then starting from 7 in the tree, which starts at 1, not 0
+    <4> Get parent - 1. get complement in 2s (revert 0 and 1, then plus 1); 2. AND it with original number; 3. substract from original number
+    <4> Get next - 1. get complement in 2s (revert 0 and 1, then plus 1); 2. AND it with original number; 3. add to original number
+    <5> Update tree - update the current tree node and its get next (logn)
