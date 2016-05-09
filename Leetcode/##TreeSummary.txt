@@ -45,4 +45,5 @@
     <3> Search tree - search for range [0,6] then starting from 7 in the tree, which starts at 1, not 0
     <4> Get parent - 1. get complement in 2s (revert 0 and 1, then plus 1); 2. AND it with original number; 3. substract from original number
     <4> Get next - 1. get complement in 2s (revert 0 and 1, then plus 1); 2. AND it with original number; 3. add to original number
-    <5> Update tree - update the current tree node and its get next (logn) - it's NOT update with diff, it is directly update with the new value
+    <5> Update tree - update the current tree node and its get next (logn) - during building, it's directly updating with the current value; during pure updating, it's updating with diff
+    <6> Get Sum - the passed in parameters are Fenwick Tree and index for the original nums array
