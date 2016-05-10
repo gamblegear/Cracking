@@ -47,3 +47,5 @@
     <4> Get next - 1. get complement in 2s (revert 0 and 1, then plus 1); 2. AND it with original number; 3. add to original number
     <5> Update tree - update the current tree node and its get next (logn) - during building, it's directly updating with the current value; during pure updating, it's updating with diff
     <6> Get Sum - the passed in parameters are Fenwick Tree and index for the original nums array
+
+16. Variations on BST could be create another variable in class which takes count - this is similar idea with Binary Indexed Tree
