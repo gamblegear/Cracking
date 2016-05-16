@@ -5,4 +5,4 @@
 3. DFS - performance improvement - for initialization, set int[] visited (=0), if the vertex has been visited and no loop detected, 
   can set this to be 1 and for those loop detected vertex, set them to be -1
 
-4. In directed graph, it's important idea when using BFS to find qualified vertex - starting from those inbound is 0
+4. BFS - for directed graph - start from the entry point which have 0 inbound
