@@ -1,0 +1,8 @@
+1. Dealing with graph - should care about how many vertexes and build visited array on top of this
+
+2. Graph traverse needs to set those to be visited and dont need to set them back while loop detection requires to set those vertex back
+
+3. DFS - performance improvement - for initialization, set int[] visited (=0), if the vertex has been visited and no loop detected, 
+  can set this to be 1 and for those loop detected vertex, set them to be -1
+
+4. In directed graph, it's important idea when using BFS to find qualified vertex - starting from those inbound is 0
