@@ -26,3 +26,9 @@ Collections.sort(edges, new Comparator<Edge>() {
 			return a.isStart ? -1 : 1;
 		}
 	});
+
+## Union Searc
+- Build the list/map which contains the connected area - once the probe falls into the targeted area, all elements in the area will be visited.
+- Universal container can be declared as global variable for the class
+- matrix's X and Y can be can be calculated by "x = cur / n & y = cur % n"
+- A great idea is to teak the original matrix a littble bit (change the target) and proceed with the remaining
