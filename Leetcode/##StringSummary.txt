@@ -18,3 +18,5 @@
     1> Minimum Window Substring: This only need to maintain the total number of appearance of target string/character list, don't care if there are more (duplicates), so only use decrease in frequency table and ignore those that are already recorded;
 
     2> Substring with Concatenation of All Words: This one is stricter, each component in the target list can be counted one and only once - this means we have to monitor the frequency table and reshape the window whenever we have duplicate (reshap earlier); Plus, the combination has to be continuous - that means whenever the current substring is not contained in target list, we have to stop and clear the current HashMap
+
+8. Wildmask questions - check if certain pattern exists - should use recursive way, not iterative way
