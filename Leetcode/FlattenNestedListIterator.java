@@ -1,5 +1,8 @@
 /*
 Realize Stack can have the same effects as Recursion.
+
+Recursion is good for Search or Traverse, but not good for keeping intermediate state, which is the requirement in this puzzle.
+Therefore, introduce using Stack to mimic the process which has the benefit of recording the status.
 */
 
 public class NestedIterator implements Iterator<Integer> {
