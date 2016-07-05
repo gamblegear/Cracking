@@ -1,1 +1,4 @@
 1. Finding max from a range, thinkg about moving both right and left edges: left++ & right--. Key point is what to compare
+
+2. When recursion, the intermediate result could affect the next state - in this case - name two tmp result to eliminate it. 
+  (See Largest Divisible Subset)
