@@ -26,3 +26,5 @@
 13. Also in Best time to Buy and Sell Stock IV - think in global optimal results and local optimal results. Understand the behavior and how to use these two
 
 14. Still the same problem - when solving with 2D matrix - pay attention to how to intitialilze the matrix (n or n+1). For already existing reference data - like prices dates, this has to be "n", otherwise, overflow. For target value, can be initialized with n+1
+
+15. WHen subset/substring - always think about using DP. Can use recursion when travering the whole set at once, but substring/subset should be an indicator for DP
